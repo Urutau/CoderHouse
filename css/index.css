@@ -51,6 +51,20 @@ p {
     padding: 5% 5% 5% 5%;
     text-align: left;
 }
+
+.jotaro_badge {
+    height: 8em;
+    float: left;
+    margin-right: 1em;
+}
+
+.requiem_arrow {
+    height: 10em;
+    position:fixed;
+    right: 2em;
+    bottom: 2em;
+}
+
 /* Paleta Joseph: https://www.color-hex.com/color-palette/39078 */
 /* Paleta Jotaro: https://www.color-hex.com/color-palette/39080 */
 
