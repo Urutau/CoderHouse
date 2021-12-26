@@ -3,15 +3,11 @@
 //2. De acuerdo al perfil obtenido, el usuario obtendrá recomendaciones de inversión adecuados a sus preferencias.
 
 //NOVEDADES:
-//Para cumplir con la consigna, se imprime el resultado del test en la página y el resultado de 20/30/50. No obstante, estuve acomodando otras cosas.
-
-//1. Sumé cuatro botones a la página:
-//creación de usuario
-//obtención de perfil (con la función test() que llama a cuestionario(), sumatoria() y perfilDeInversor() e imprime resultado.
-//la distribución financiera del sueldo (veinte3050()) quedó como acción independiente del test, e imprime resultado.
-//limpiar Local Storage y recargar página.
-//2. Hay cambios en el método edad() de la clase Usuario, ahora devuelve el rango etario por la variable rango.
-//3. El encabezado (hola()) carga el nombre del usuario. Si no hay usuario en Local Storage, carga "Usuario". Para eso puse un reload en la creación del usuario y en el botón para limpiar el Local Storage.
+//Para cumplir con la consigna, cambié los onclick dentro de los tags del HTML por IDs, y pasé los eventos a events/events.js, por cuanto
+//la acción de los botones se produce por los cinco primeros eventos en ese archivo, y por los últimos dos la imagen inferior derecha de la pantalla
+//cambia al pasar y retirar el cursor del mouse. 
+//Agregué el botón de "Cargar nueva inversión". No sería un botón para el usuario final, sino para el programador del sitio.
+//Borré los comentarios de las líneas inferiores para limpiar un poco el código.
 
 //Próximamente:
 //Integración de los datos del usuario con los datos del proceso de perfil (edad, perfil de inversor, sueldo, etc)
@@ -50,7 +46,6 @@ let cincuenta;
 const filtroDeVolatilidad = productos.filter(producto => producto.volatilidad == "Baja");
 console.log(filtroDeVolatilidad);
 
-//Estos son los puntajes de cada respuesta, hay un array por pregunta, un puntaje para cada respuesta
 const puntajes = [[4, 3, 2, 1], [1, 2, 3, 4], [4, 3], [2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [2, 3, 4], [1, 2, 3, 4],];
 
 let respuestas = [];
@@ -66,17 +61,11 @@ function nuevoUsuario (){
     anios =  prompt("¿Cuál es tu edad?"),
     sueldo = prompt("¿Cuál es tu sueldo en pesos?"),
     );
-    //Probando cómo funciona el método
-    persona1.edad();
-    console.log(rango);
 
-    //El usuario se guarda en Local Storage (console.log para monitoreo)
     datosUsuario = localStorage.setItem("usuario", JSON.stringify(persona1));
     console.log(localStorage.getItem("usuario"));
     
-    //Recarga la página para actualizar el encabezado
     location.reload();
-    // usuarios.push(persona1);
         return persona1;
 }
 
@@ -117,8 +106,6 @@ function veinte3050 () {
 
 }
 
-//La función [cuestionario] reúne las opciones del usuario en el array [respuestas].
-//Más adelante, este cuestionario se podría transferir a un formulario, para hacer más simple su compleción.
 function cuestionario () {
     let pregunta1 = parseInt(prompt("Su edad se encuentra dentro del rango de:\n1) Menos de 25 Años.\n2) De 25 a 35 Años.\n3) De 36 a 55 Años.\n4) De 56 Años o más."));
     respuestas.push(pregunta1);
@@ -146,8 +133,6 @@ function cuestionario () {
     respuestas.push(pregunta12);
 }
 
-//Esta es la función que calcula el puntaje obtenido luego del cuestionario, recorriendo el array [puntajes]. Dos días de trabajo para que funcione bien.
-//El puntaje se devuelve en la variable [acumulativo].
 function sumatoria () {
     for (var i = 0; i < respuestas.length; i++){
         let posicionPuntaje = respuestas[i];
@@ -157,7 +142,6 @@ function sumatoria () {
     return parseInt(acumulativo);
 }
 
-//Esta es la función que devuelve el perfil:
 function perfilDeInversor (acumulativo) {
         if (acumulativo <= 23){
             perfil = "Conservador";
@@ -175,7 +159,6 @@ function perfilDeInversor (acumulativo) {
     return perfil;
 }
 
-//Esta función llama a tres anteriores para el botón "Obtener perfil" e imprime un cuadro de texto en la página. Los console.log son para monitoreo.
 function test () {
     cuestionario();
     console.log(respuestas);
@@ -188,8 +171,6 @@ function test () {
     document.body.appendChild(parrafoPerfil);
 }
 
-//Esta es medio rara. La idea era que el if evaluara si hay usuario cargado en Local Storage, pero no lo pude hacer funcionar [if (localStorage.getItem("usuario")!="")]
-//Por eso, opté por hacer que evalúe si se cargó un nombre de usuario ¯\_(ツ)_/¯
 function hola (){
     if (localStorage.getItem("usuario") != null) {
         let hola = document.createElement("h1");
@@ -202,10 +183,12 @@ function hola (){
     }
 }
 
-function limpiar () {
-    localStorage.clear();
-    location.reload();
+function cambiarArrow () {
+    let flecha = document.getElementById("arrow");
+    flecha.src = "./images/ladybug.png";
 }
 
-//Llamadas:
-// nuevaInversion();
+function cambiarArrow2 () {
+    let flecha2 = document.getElementById("arrow");
+    flecha2.src = "./images/arrow_r.png";
+}
