@@ -36,6 +36,11 @@ p {
     color: #b7b7b7;
 }
 
+li {
+    color: #b7b7b7;
+    list-style: none;
+}
+
 .perfil {
     color: #b7b7b7;
     font-size: 1.5em;
@@ -75,7 +80,7 @@ p {
         background-image: linear-gradient(to right bottom, #00012c, #00012c,#00012c,#00012c, #271e4f, #543573, #864c95, #bd63b4);
     }
 }
-/* background-color: linear-gradient(45deg #00012c #bd63b4);  */
+
 /* Paleta Joseph: https://www.color-hex.com/color-palette/39078 */
 /* Paleta Jotaro: https://www.color-hex.com/color-palette/39080 */
 
