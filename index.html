@@ -17,14 +17,154 @@
         
         <div>
             <button id="bUsuario">Crear nuevo usuario</button>
-            <a href="./admin.html"><button id="baAdmin">Menú Administrador</button></a>
+            <button id="b203050">¿Cómo administro mi sueldo?</button>
+            <br><br><br>
+            <button id="bNuevaInversion">Cargar nueva inversion</button>
+            <button id="bListado">Mostrar listado de productos</button>
+            <br>
             <button id="bLimpiar">Limpiar LS</button>
             <br><br><br>
-            <a href="./test.html"><button id="baTest">Obtener perfil</button></a>
-            <button id="b203050">¿Cómo administro mi sueldo?</button>
         </div>
+
         <br><br><br>
-        
+
+        <section>
+            <form id="formulario">
+                <fieldset class="fieldset">
+                    <br>
+                    <legend>Responde el siguiente cuestionario:</legend>
+                    <label>Su edad se encuentra dentro del rango de:</label>
+                    <br>
+                    <input type="radio" name="pregunta1" class="pregunta" value="4"> Menos de 25 años.
+                    <br>
+                    <input type="radio" name="pregunta1" class="pregunta" value="3"> De 25 a 35 años.
+                    <br>
+                    <input type="radio" name="pregunta1" class="pregunta" value="2"> De 36 a 55 años.
+                    <br>
+                    <input type="radio" name="pregunta1" class="pregunta" value="1"> 56 años o más.
+                    <br><br>
+                    
+                    <label>¿Cuánto conoce del Mercado de Capitales?</label>
+                    <br>
+                    <input type="radio" name="pregunta2" class="pregunta" value="1"> Nada.
+                    <br>
+                    <input type="radio" name="pregunta2" class="pregunta" value="2"> Un poco.
+                    <br>
+                    <input type="radio" name="pregunta2" class="pregunta" value="3"> Bastante.
+                    <br>
+                    <input type="radio" name="pregunta2" class="pregunta" value="4"> Soy profesional en finanzas.
+                    <br><br>
+                    
+                    <label>¿Ha realizado alguna vez una inversión en el Mercado de Capitales?</label>
+                    <br>
+                    <input type="radio" name="pregunta3" class="pregunta" value="4"> Sí.
+                    <br>
+                    <input type="radio" name="pregunta3" class="pregunta" value="3"> No.
+                    <br><br>
+                    
+                    <label>¿Cuenta con alguna reserva para cubrir un imprevisto?</label>
+                    <br>
+                    <input type="radio" name="pregunta4" class="pregunta" value="2"> No o es muy pequeña.
+                    <br>
+                    <input type="radio" name="pregunta4" class="pregunta" value="3"> Si, representa más o menos 5 meses de mis ingresos.
+                    <br>
+                    <input type="radio" name="pregunta4" class="pregunta" value="4"> Si, es una cantidad significativa.
+                    <br><br>       
+                    
+                    <label>¿Que porcentaje de sus ahorros esta dispuesto a destinar a las inversiones en el mercado de capitales?</label>
+                    <br>
+                    <input type="radio" name="pregunta5" class="pregunta" value="1"> Menos del 25%.
+                    <br>
+                    <input type="radio" name="pregunta5" class="pregunta" value="2"> Entre el 25% y el 40%.
+                    <br>
+                    <input type="radio" name="pregunta5" class="pregunta" value="3"> Entre el 41% y el 65%.
+                    <br>
+                    <input type="radio" name="pregunta5" class="pregunta" value="4"> Mas del 65%.
+                    <br><br>       
+                    
+                    <label>¿Cuál sería la canasta de inversiones que más lo identifica?</label>
+                    <br>
+                    <input type="radio" name="pregunta6" class="pregunta" value="1"> 100% en activos de renta fija a corto plazo y con mucha liquidez.
+                    <br>
+                    <input type="radio" name="pregunta6" class="pregunta" value="2"> 60% en activos de renta fija altamente líquidos a corto plazo y 40% en activos de renta variable de mediano plazo.
+                    <br>
+                    <input type="radio" name="pregunta6" class="pregunta" value="3"> 40% en activos de renta fija altamente líquidos a corto plazo y 60% en activos de renta variable a largo plazo.
+                    <br>
+                    <input type="radio" name="pregunta6" class="pregunta" value="4"> 100% en activos de renta variable a largo plazo.
+                    <br><br>
+                    
+                    <label>¿Cuál es el plazo máximo que usted estaría dispuesto a mantener sus inversiones en el mercado de capitales?</label>
+                    <br>
+                    <input type="radio" name="pregunta7" class="pregunta" value="2"> Menos de cuatro meses.
+                    <br>
+                    <input type="radio" name="pregunta7" class="pregunta" value="3"> Entre cuatro y doce meses.
+                    <br>
+                    <input type="radio" name="pregunta7" class="pregunta" value="4"> Más de doce meses.
+                    <br><br>       
+                    
+                    <label>Seleccione de las siguientes afirmaciones cuál identifica mejor su actitud hacia las inversiones:</label>
+                    <br>
+                    <input type="radio" name="pregunta8" class="pregunta" value="1"> No estaría dispuesto a realizar ninguna inversión que implicara arriesgar mi capital.
+                    <br>
+                    <input type="radio" name="pregunta8" class="pregunta" value="2"> Aceptaría un mínimo riesgo si con ello puedo obtener una mayor rentabilidad.
+                    <br>
+                    <input type="radio" name="pregunta8" class="pregunta" value="3"> Estaría dispuesto a asumir una pérdida del 10% si espero tener a mediano / largo plazo una mayor rentabilidad.
+                    <br>
+                    <input type="radio" name="pregunta8" class="pregunta" value="4"> Acepto asumir un alto riesgo para obtener una mayor rentabilidad.
+                    <br><br>       
+                    
+                    <label>Ante una baja importante en su portfolio de inversiones, usted:</label>
+                    <br>
+                    <input type="radio" name="pregunta9" class="pregunta" value="1"> Recuperaría el total de mis activos.
+                    <br>
+                    <input type="radio" name="pregunta9" class="pregunta" value="2"> Rescataría una parte de mis activos.
+                    <br>
+                    <input type="radio" name="pregunta9" class="pregunta" value="3"> Mantendría la totalidad de mis activos esperando una suba.
+                    <br>
+                    <input type="radio" name="pregunta9" class="pregunta" value="4"> Adicionaría mas capital esperando comprar barato.
+                    <br><br>       
+                    
+                    <label>Si usted tuviera que contratar un seguro para auto, optaría por:</label>
+                    <br>
+                    <input type="radio" name="pregunta10" class="pregunta" value="1"> Póliza contra todo riesgo, sin importar que sea la más cara.
+                    <br>
+                    <input type="radio" name="pregunta10" class="pregunta" value="2"> Póliza únicamente de seguro contra terceros.
+                    <br>
+                    <input type="radio" name="pregunta10" class="pregunta" value="3"> La póliza más barata, aunque su cobertura sea muy pobre.
+                    <br>
+                    <input type="radio" name="pregunta10" class="pregunta" value="4"> No contrato ninguna póliza.
+                    <br><br>       
+                    
+                    <label>En el momento de realizar una inversión, cual de las siguientes opciones prefiere?:</label>
+                    <br>
+                    <input type="radio" name="pregunta11" class="pregunta" value="2"> Preservar el dinero que se invirtió con una rentabilidad mínima.
+                    <br>
+                    <input type="radio" name="pregunta11" class="pregunta" value="3"> Tener una ganancia apenas superior a la de un plazo fijo, aunque este sujeta a una variación mínima del mercado.
+                    <br>
+                    <input type="radio" name="pregunta11" class="pregunta" value="4"> Obtener una ganancia significativa, corriendo el riesgo de perder más de la mitad de la inversión inicial.
+                    <br><br>       
+                    
+                    <label>Usted estaría dispuesto a asumir una baja en el valor de sus activos:</label>
+                    <br>
+                    <input type="radio" name="pregunta12" class="pregunta" value="1"> No estoy dispuesto aceptar ninguna pérdida.
+                    <br>
+                    <input type="radio" name="pregunta12" class="pregunta" value="2"> Máximo del 10%.
+                    <br>
+                    <input type="radio" name="pregunta12" class="pregunta" value="3"> Entre 11% y 25%.
+                    <br>
+                    <input type="radio" name="pregunta12" class="pregunta" value="4"> Mayor que 25%.
+                    <br><br>       
+
+                    <button id="enviar">Enviar</button>
+                    <button id="obtenerResultado">Obtener resultado</button>
+
+                    <br><br>       
+                </fieldset>
+            </form>
+        </section>
+    
+        <div id="divProductos"></div>
+
         <img src="./images/arrow_r.png" class="requiem_arrow" id="arrow" alt="imagen decorativa">
 
         <script src="./js/events/events.js"></script>

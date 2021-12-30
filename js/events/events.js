@@ -1,8 +1,5 @@
-let arrow = document.getElementById("arrow");
-arrow.onmouseover = () => cambiarArrow();
-
-let arrow2 = document.getElementById("arrow");
-arrow2.onmouseleave = () => cambiarArrow2();
+let bUsuario = document.getElementById("bUsuario");
+bUsuario.onclick = () => nuevoUsuario(); 
 
 let b203050 = document.getElementById("b203050");
 b203050.onclick = () => veinte3050();
@@ -13,11 +10,11 @@ bLimpiar.onclick = () => {
     location.reload();
 }
 
-// let bNuevaInversion = document.getElementById("bNuevaInversion");
-// bNuevaInversion.onclick = () => nuevaInversion();
+let bNuevaInversion = document.getElementById("bNuevaInversion");
+bNuevaInversion.onclick = () => nuevaInversion();
 
-// let bListado = document.getElementById("bListado");
-// bListado.onclick = () => mostrarProductos();
+let bListado = document.getElementById("bListado");
+bListado.onclick = () => mostrarProductos();
 
 
 function mostrarProductos () {
@@ -52,20 +49,24 @@ let enviar = document.getElementById("formulario");
 enviar.addEventListener("submit", submit)
 
 function submit (e) {
-e.preventDefault();
-let preguntas = (document.getElementsByClassName("pregunta"))
+    e.preventDefault();
+    let preguntas = (document.getElementsByClassName("pregunta"))
     console.log(preguntas)
-for (pregunta of preguntas) {
-    pregunta.checked ? acumulativo += parseInt(pregunta.value) : acumulativo += 0; 
-}
-console.log(acumulativo)
-//limpia el formulario
-enviar.reset()
-return acumulativo
+    for (pregunta of preguntas) {
+        pregunta.checked ? acumulativo += parseInt(pregunta.value) : acumulativo += 0; 
+    }
+    console.log(typeof acumulativo)
+    console.log(acumulativo)
+    //limpia el formulario
+    enviar.reset()
+    return acumulativo
 }
 
 let obtenerResultado = document.getElementById("obtenerResultado");
 obtenerResultado.addEventListener("click", test)
 
-let bUsuario = document.getElementById("bUsuario");
-bUsuario.onclick = () => nuevoUsuario(); 
+let arrow = document.getElementById("arrow");
+arrow.onmouseover = () => cambiarArrow();
+
+let arrow2 = document.getElementById("arrow");
+arrow2.onmouseleave = () => cambiarArrow2();

@@ -3,12 +3,14 @@
 //2. De acuerdo al perfil obtenido, el usuario obtendrá recomendaciones de inversión adecuados a sus preferencias.
 
 //NOVEDADES:
-//Para cumplir con la consigna, imprimo dentro de un div el listado actual de productos financieros, que está en el array [productos], mediante un evento
-//asignado al botón Mostrar listado de productos, también creado para la consigna.
+//Por el momento, para imprimir el perfil de inversor hay que llenar el formulario, presionar el botón Enviar
+//y luego el botón Obtener resultado. Ya los fusionaré  (>-_-)><(-_-<) 
+//La sumatoria de puntajes se hace ahora desde la función submit() y se realiza sumando los values de los inputs clase 'pregunta' tildados.
 
 //Próximamente:
 //Integración de los datos del usuario con los datos del proceso de perfil (edad, perfil de inversor, sueldo, etc)
-//Front, formulario para el cuestionario, presentación de recomendaciones y mecánica de recomendación.
+//Front, presentación de recomendaciones y mecánica de recomendación.
+//Separación en secciones, una por HTML (lo intenté y se rompió todo, volví a la página única).
 
 let usuarios = [];
 let persona1 = {};
@@ -43,9 +45,6 @@ let cincuenta;
 const filtroDeVolatilidad = productos.filter(producto => producto.volatilidad == "Baja");
 console.log(filtroDeVolatilidad);
 
-// const puntajes = [[4, 3, 2, 1], [1, 2, 3, 4], [4, 3], [2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [2, 3, 4], [1, 2, 3, 4],];
-
-let respuestas = [];
 let acumulativo = 0;
 let perfil = "";
 let rango = "";
@@ -63,7 +62,7 @@ function nuevoUsuario (){
     console.log(localStorage.getItem("usuario"));
     
     location.reload();
-        return persona1;
+    return persona1;
 }
 
 function nuevaInversion () {
@@ -131,8 +130,9 @@ function perfilDeInversor (acumulativo) {
     return perfil;
 }
 
-function test (acumulativo) {
+function test () {
     perfilDeInversor(acumulativo);
+    console.log(acumulativo);
     console.log(perfil);
     let parrafoPerfil = document.createElement("p");
     parrafoPerfil.innerHTML = `<p class="perfil">Tu perfil de inversión es:\n${perfil}</p>`
