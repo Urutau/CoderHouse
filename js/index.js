@@ -3,9 +3,9 @@
 //2. De acuerdo al perfil obtenido, el usuario obtendrá recomendaciones de inversión adecuados a sus preferencias.
 
 //NOVEDADES:
-//Por el momento, para imprimir el perfil de inversor hay que llenar el formulario, presionar el botón Enviar
-//y luego el botón Obtener resultado. Ya los fusionaré  (>-_-)><(-_-<) 
+//Para imprimir el perfil de inversor hay que llenar el formulario, presionar el botón Enviar y luego el botón Obtener resultado. Ya los fusionaré  (>-_-)><(-_-<) 
 //La sumatoria de puntajes se hace ahora desde la función submit() y se realiza sumando los values de los inputs clase 'pregunta' tildados.
+//No llegué con el tiempo a cambiar todos los prompt() por formularios, pero es algo que haré para la próxima entrega. 
 
 //Próximamente:
 //Integración de los datos del usuario con los datos del proceso de perfil (edad, perfil de inversor, sueldo, etc)

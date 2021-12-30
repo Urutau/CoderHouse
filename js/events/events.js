@@ -40,9 +40,6 @@ function mostrarProductos () {
 }
 
 //Esta parte del código es para prevenir el submit del formulario y sumar los puntajes obtenidos del formulario.
-//Quise seleccionar los elementos del DOM que contuvieran "pregunta" con document.getElementsByName(), pero no supe 
-//establecer el filtro de selección (¿con un filter(), con una expresión regular?)
-//Lo negativo de esta resolución, es que suma lo que entre por <input> así que tengo que poner cualquier otro formulario en otra página. 
 //Esta parte del código devuelve acumulativo, así que elimino código anterior (función sumatoria() y su llamada).
 
 let enviar = document.getElementById("formulario");
