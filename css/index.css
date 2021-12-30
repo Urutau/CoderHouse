@@ -41,6 +41,12 @@ li {
     list-style: none;
 }
 
+.fieldset {
+    border-radius: 5%;
+    border-color: #ffdf32;
+    color: #b7b7b7;
+}
+
 .perfil {
     color: #b7b7b7;
     font-size: 1.5em;
@@ -65,9 +71,9 @@ li {
 
 .requiem_arrow {
     height: 10em;
-    position:fixed;
-    right: 2em;
-    bottom: 2em;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
 }
 
 #arrow:hover {
@@ -81,7 +87,7 @@ li {
     }
 }
 
-/* Paleta Joseph: https://www.color-hex.com/color-palette/39078 */
+
 /* Paleta Jotaro: https://www.color-hex.com/color-palette/39080 */
 
 /*

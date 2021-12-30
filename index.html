@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <title>Desafío 8 - DOM</title>
-</head>
-<body>
-    <script src="index.classes.js"></script>    
-    <script src="index.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+        <title></title>
+    </head>
     
-    <img src="./images/jotaro_badge_r.png" class="jotaro_badge">
-    <script>hola()</script>
-    
-    <br><br><br>
-    <div>
-        <button id="bUsuario">Crear nuevo usuario</button>
-        <button id="bTest"">Obtener perfil</button>
-        <button id="b203050">¿Cómo administro mi sueldo?</button>
-    </div>
-    <br><br><br>
-    <button id="bNuevaInversion">Cargar nueva inversion</button>
-    <button id="bLimpiar">Limpiar LS</button>
-    <button id="bListado">Mostrar listado de productos</button>
+    <body>
+        
+        <script src="./js/classes/index.classes.js"></script>    
+        <script src="./js/index.js"></script>
+        <img src="./images/jotaro_badge_r.png" class="jotaro_badge" alt="imagen decorativa">
+        <script>hola()</script>
+        
+        <div>
+            <button id="bUsuario">Crear nuevo usuario</button>
+            <a href="./admin.html"><button id="baAdmin">Menú Administrador</button></a>
+            <button id="bLimpiar">Limpiar LS</button>
+            <br><br><br>
+            <a href="./test.html"><button id="baTest">Obtener perfil</button></a>
+            <button id="b203050">¿Cómo administro mi sueldo?</button>
+        </div>
+        <br><br><br>
+        
+        <img src="./images/arrow_r.png" class="requiem_arrow" id="arrow" alt="imagen decorativa">
 
-    <div id="divProductos"></div>
-
-    <img src="./images/arrow_r.png" class="requiem_arrow" id="arrow">
-    <script src="./events/events.js"></script>
-
+        <script src="./js/events/events.js"></script>
 </body>
+
 </html>
