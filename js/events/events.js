@@ -39,8 +39,8 @@ function mostrarProductos () {
     })
 }
 
-//Esta parte del código es para prevenir el submit del formulario y sumar los puntajes obtenidos del formulario.
-//Esta parte del código devuelve acumulativo, así que elimino código anterior (función sumatoria() y su llamada).
+
+//Esta parte del código es para prevenir el submit del formulario, sumar los puntajes obtenidos del formulario e imprimir el resultado del test.
 
 let enviar = document.getElementById("formulario");
 enviar.addEventListener("submit", submit)
@@ -56,11 +56,13 @@ function submit (e) {
     console.log(acumulativo)
     //limpia el formulario
     enviar.reset()
-    return acumulativo
+    perfilDeInversor(acumulativo);
+    console.log(acumulativo);
+    console.log(perfil);
+    let parrafoPerfil = document.createElement("p");
+    parrafoPerfil.innerHTML = `<p class="perfil" id="perfil">Tu perfil de inversión es:\n${perfil}</p>`
+    document.getElementsByTagName("article")[0].appendChild(parrafoPerfil);
 }
-
-let obtenerResultado = document.getElementById("obtenerResultado");
-obtenerResultado.addEventListener("click", test)
 
 let arrow = document.getElementById("arrow");
 arrow.onmouseover = () => cambiarArrow();

@@ -98,18 +98,18 @@ function veinte3050 () {
         Espero que esta información te haya sido de utilidad. Si querés conocer en qué podés invertir esos $${veinte}, ingresá en <a href="https://www.youtube.com/watch?v=-SgP7vPbenk" target="_blank">este enlace.</a>
         <hr>
         </p>`
-    document.body.appendChild(parrafo203050);
+    document.getElementsByTagName("article")[0].appendChild(parrafo203050);
 }
 
 function hola (){
     if (localStorage.getItem("usuario") != null) {
         let hola = document.createElement("h1");
         hola.innerHTML = `<h1>¡Hola, ${usuarioParse.nombre}!</h1>`
-        document.body.appendChild(hola);
+        document.getElementsByTagName("header")[0].appendChild(hola);
     } else {
         let hola1 = document.createElement("h1");
         hola1.innerHTML = `<h1>¡Hola, Usuario!</h1>`
-        document.body.appendChild(hola1);
+        document.getElementsByTagName("header")[0].appendChild(hola1);
     }
 }
 
@@ -130,14 +130,14 @@ function perfilDeInversor (acumulativo) {
     return perfil;
 }
 
-function test () {
-    perfilDeInversor(acumulativo);
-    console.log(acumulativo);
-    console.log(perfil);
-    let parrafoPerfil = document.createElement("p");
-    parrafoPerfil.innerHTML = `<p class="perfil">Tu perfil de inversión es:\n${perfil}</p>`
-    document.body.appendChild(parrafoPerfil);
-}
+// function test () {
+//     perfilDeInversor(acumulativo);
+//     console.log(acumulativo);
+//     console.log(perfil);
+//     let parrafoPerfil = document.createElement("p");
+//     parrafoPerfil.innerHTML = `<p class="perfil">Tu perfil de inversión es:\n${perfil}</p>`
+//     document.body.appendChild(parrafoPerfil);
+// }
 
 function cambiarArrow () {
     let flecha = document.getElementById("arrow");
