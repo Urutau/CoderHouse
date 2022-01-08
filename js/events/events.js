@@ -13,59 +13,72 @@ bLimpiar.onclick = () => {
 let bNuevaInversion = document.getElementById("bNuevaInversion");
 bNuevaInversion.onclick = () => nuevaInversion();
 
-let bListado = document.getElementById("bListado");
-bListado.onclick = () => mostrarProductos();
+//jQuery: shortcut
+$("#bListado").click( () => mostrarProductos() );
 
-
+//jQuery: prepend() y append()
 function mostrarProductos () {
-    let divProductos = document.getElementById("divProductos");
-    let tituloListado = document.createElement("h2");
-    tituloListado.innerHTML = `<h2>Listado actual de productos financieros:</h2>`
-    divProductos.appendChild(tituloListado);
-    let listado = document.createElement("p");
-    productos.forEach(producto => {
-        listado.innerHTML += `<p>
-        Producto: ${producto.nombre}
-        <br>
-        Duración: ${producto.duracion} días
-        <br>
-        Volatilidad: ${producto.volatilidad}
-        <br>
-        Liquidez: en ${producto.liquidez} hs
-        <br>
-        Beneficio: coeficiente ${producto.beneficio}
-        </p>`
-        divProductos.appendChild(listado)
-    })
-}
+    $("#divProductos").prepend(`<h2>Listado actual de productos financieros:</h2>`);
 
+    $("#divProductos").append(productos.forEach(producto => {
+        $("#divProductos").append(`<p>
+            Producto: ${producto.nombre}
+            <br>
+            Duración: ${producto.duracion} días
+            <br>
+            Volatilidad: ${producto.volatilidad}
+            <br>
+            Liquidez: en ${producto.liquidez} hs
+            <br>
+            Beneficio: coeficiente ${producto.beneficio}
+            </p>`
+        )}));
+    // let divProductos = document.getElementById("divProductos");
+    // let tituloListado = document.createElement("h2");
+    // tituloListado.innerHTML = `<h2>Listado actual de productos financieros:</h2>`
+    // divProductos.appendChild(tituloListado);
+    // let listado = document.createElement("p");
+    // productos.forEach(producto => {
+    //     listado.innerHTML += `<p>
+    //     Producto: ${producto.nombre}
+    //     <br>
+    //     Duración: ${producto.duracion} días
+    //     <br>
+    //     Volatilidad: ${producto.volatilidad}
+    //     <br>
+    //     Liquidez: en ${producto.liquidez} hs
+    //     <br>
+    //     Beneficio: coeficiente ${producto.beneficio}
+    //     </p>`
+    //     divProductos.appendChild(listado)
+    // )}
+}
 
 //Esta parte del código es para prevenir el submit del formulario, sumar los puntajes obtenidos del formulario e imprimir el resultado del test.
 
-let enviar = document.getElementById("formulario");
-enviar.addEventListener("submit", submit)
+//jQuery: on()
+$("#formulario").on("submit", submit);
+
+// let enviar = document.getElementById("formulario");
+// enviar.addEventListener("submit", submit)
 
 function submit (e) {
     e.preventDefault();
-    let preguntas = (document.getElementsByClassName("pregunta"))
-    console.log(preguntas)
+    let preguntas = $(".pregunta");
     for (pregunta of preguntas) {
         pregunta.checked ? acumulativo += parseInt(pregunta.value) : acumulativo += 0; 
     }
-    console.log(typeof acumulativo)
-    console.log(acumulativo)
     //limpia el formulario
-    enviar.reset()
+    document.getElementById("formulario").reset();
+    // enviar.reset()
     perfilDeInversor(acumulativo);
-    console.log(acumulativo);
-    console.log(perfil);
-    let parrafoPerfil = document.createElement("p");
-    parrafoPerfil.innerHTML = `<p class="perfil" id="perfil">Tu perfil de inversión es:\n${perfil}</p>`
-    document.getElementsByTagName("article")[0].appendChild(parrafoPerfil);
+    $("#cuestionario").append(`<p class="perfil" id="perfil">Tu perfil de inversión es:\n${perfil}</p>`);
 }
-
-let arrow = document.getElementById("arrow");
+ 
+let arrow = $("#arrow")[0];
+// document.getElementById("arrow");
 arrow.onmouseover = () => cambiarArrow();
 
-let arrow2 = document.getElementById("arrow");
+let arrow2 = $("#arrow")[0];
+// document.getElementById("arrow");
 arrow2.onmouseleave = () => cambiarArrow2();

@@ -1,11 +1,13 @@
+//¡Hola! Para este ejercicio, agregué jQuery en los siguientes sitios:
+//• archivo events.js: líneas 17, 21, 23, 24, 60, 67, 75, 78, 82.
+//• En este mismo archivo (index.js), líneas 136 y 142.
+//jQuery es tan práctico y ahorra tanto código que temo olvidar la forma anterior XD. No obstante, creo que hace el código menos legible para los humanos.
+
+
 //El proyecto es, por ahora, un sitio/aplicación para recomendación de productos financieros, de inversión, de acuerdo al perfil de inversor del usuario.
 //1. El usuario podrá ingresar, completar un test de 12 preguntas que determinará su perfil de inversor.
 //2. De acuerdo al perfil obtenido, el usuario obtendrá recomendaciones de inversión adecuados a sus preferencias.
 
-//NOVEDADES:
-//Para imprimir el perfil de inversor hay que llenar el formulario, presionar el botón Enviar y luego el botón Obtener resultado. Ya los fusionaré  (>-_-)><(-_-<) 
-//La sumatoria de puntajes se hace ahora desde la función submit() y se realiza sumando los values de los inputs clase 'pregunta' tildados.
-//No llegué con el tiempo a cambiar todos los prompt() por formularios, pero es algo que haré para la próxima entrega. 
 
 //Próximamente:
 //Integración de los datos del usuario con los datos del proceso de perfil (edad, perfil de inversor, sueldo, etc)
@@ -130,21 +132,14 @@ function perfilDeInversor (acumulativo) {
     return perfil;
 }
 
-// function test () {
-//     perfilDeInversor(acumulativo);
-//     console.log(acumulativo);
-//     console.log(perfil);
-//     let parrafoPerfil = document.createElement("p");
-//     parrafoPerfil.innerHTML = `<p class="perfil">Tu perfil de inversión es:\n${perfil}</p>`
-//     document.body.appendChild(parrafoPerfil);
-// }
-
 function cambiarArrow () {
-    let flecha = document.getElementById("arrow");
+    let flecha = $("#arrow")[0];
+    // document.getElementById("arrow");
     flecha.src = "./images/ladybug.png";
 }
 
 function cambiarArrow2 () {
-    let flecha2 = document.getElementById("arrow");
+    let flecha2 = $("#arrow")[0];
+    // document.getElementById("arrow");    
     flecha2.src = "./images/arrow_r.png";
 }
