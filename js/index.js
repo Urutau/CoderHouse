@@ -55,9 +55,9 @@ let usuarioParse = JSON.parse(localStorage.getItem("usuario"));
 
 function nuevoUsuario (){
     persona1 = new Usuario(
-    nombre = prompt("¿Cuál es tu nombre?"),
-    anios =  prompt("¿Cuál es tu edad?"),
-    sueldo = prompt("¿Cuál es tu sueldo en pesos?"),
+    nombre = $("#nombre")[0].value,
+    anios =  $("#anios")[0].value,
+    sueldo = $("#sueldo")[0].value,
     );
 
     datosUsuario = localStorage.setItem("usuario", JSON.stringify(persona1));

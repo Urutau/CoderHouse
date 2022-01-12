@@ -61,9 +61,18 @@ li {
     list-style: none;
 }
 
+.doscolumnas {
+    column-count: 2;
+    column-gap: 2em;
+    line-height: 1.75em;
+    column-rule-style: dashed;
+    column-rule-color: #ffdf32;
+}
+
 .fieldset {
-    border-radius: 5%;
-    border-color: #ffdf32;
+    /* border-radius: 5%; */
+    /* border-color: #ffdf32; */
+    border-style: none;
     color: #b7b7b7;
 }
 

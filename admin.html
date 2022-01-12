@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+        <title></title>
+    </head>
+    
+    <body>
+        <main>
+
+            <header>
+                <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="./js/classes/index.classes.js"></script>    
+                <script type="text/javascript" src="./js/index.js"></script>
+                <img src="./images/jotaro_badge_r.png" class="jotaro_badge" alt="imagen decorativa">
+                <script type="text/javascript">hola()</script>
+            </header>
+
+            <aside>
+            </aside>
+
+            <nav>
+                <div>
+                    <button id="bListado">Mostrar listado de productos</button>
+                    <br><br>
+                    <button id="bLimpiar">Limpiar LS</button>
+                    <br><br><br>
+                    <a href="index.html"><button>PRINCIPAL</button></a>
+                    <br><br>
+                </div>
+            </nav>
+
+            <article>
+                <form action="">
+                    <fieldset class="fieldset">
+                        <legend>Ingrese los datos del nuevo producto</legend>
+                        <br><br>
+                        <label for="nombreprod">Nombre del producto</label>
+                        <br>
+                        <input type="text" name="nombre" id="nombreprod">
+                        <br><br>
+                        <label for="duracion">Duración en meses</label>
+                        <br>
+                        <input type="number" name="duracion" id="duracion" min="0">
+                        <br><br>
+                        <label for="volatilidad">Volatilidad</label>
+                        <br>
+                        <select name="volatilidad" id="volatilidad">
+                            <option value="Alta">Alta</option>
+                            <option value="Media">Media</option>
+                            <option value="Baja">Baja</option>
+                        </select>
+                        <br><br>
+                        <label for="liquidez">Liquidez</label>
+                        <br>
+                        <select name="liquidez" id="liquidez">
+                            <option value="24">24hs</option>
+                            <option value="48">48hs</option>
+                            <option value="72">72hs</option>
+                            <option value="plazo">A plazo</option>
+                        </select>
+                        <br><br>
+                        <label for="beneficio">Coeficiente de beneficio anualizado</label>
+                        <br>
+                        <input type="number" name="beneficio" id="beneficio" min="0" step="0.01">
+                        <br><br>
+                        
+                        <button>Grabar</button>
+                    </fieldset>
+                </form>
+                <div id="divProductos"></div>
+            </article>
+            
+            <footer>
+            </footer>
+        </main>
+        <script type="text/javascript" src="./js/events/events.js"></script>
+    </body>
+</html>

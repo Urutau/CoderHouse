@@ -1,4 +1,4 @@
-let bUsuario = document.getElementById("bUsuario");
+let bUsuario = document.getElementById("crearUsuario");
 bUsuario.onclick = () => nuevoUsuario(); 
 
 let b203050 = document.getElementById("b203050");
@@ -13,47 +13,37 @@ bLimpiar.onclick = () => {
 let bNuevaInversion = document.getElementById("bNuevaInversion");
 bNuevaInversion.onclick = () => nuevaInversion();
 
+let arrow = $("#arrow")[0];
+// document.getElementById("arrow");
+arrow.onmouseover = () => cambiarArrow();
+
+let arrow2 = $("#arrow")[0];
+// document.getElementById("arrow");
+arrow2.onmouseleave = () => cambiarArrow2();
+
 //jQuery: shortcut
 $("#bListado").click( () => mostrarProductos() );
 
 //jQuery: prepend() y append()
 function mostrarProductos () {
     $("#divProductos").prepend(`<h2>Listado actual de productos financieros:</h2>`);
-
+    
     $("#divProductos").append(productos.forEach(producto => {
         $("#divProductos").append(`<p>
-            Producto: ${producto.nombre}
-            <br>
-            Duración: ${producto.duracion} días
-            <br>
-            Volatilidad: ${producto.volatilidad}
-            <br>
-            Liquidez: en ${producto.liquidez} hs
-            <br>
-            Beneficio: coeficiente ${producto.beneficio}
-            </p>`
-        )}));
-    // let divProductos = document.getElementById("divProductos");
-    // let tituloListado = document.createElement("h2");
-    // tituloListado.innerHTML = `<h2>Listado actual de productos financieros:</h2>`
-    // divProductos.appendChild(tituloListado);
-    // let listado = document.createElement("p");
-    // productos.forEach(producto => {
-    //     listado.innerHTML += `<p>
-    //     Producto: ${producto.nombre}
-    //     <br>
-    //     Duración: ${producto.duracion} días
-    //     <br>
-    //     Volatilidad: ${producto.volatilidad}
-    //     <br>
-    //     Liquidez: en ${producto.liquidez} hs
-    //     <br>
-    //     Beneficio: coeficiente ${producto.beneficio}
-    //     </p>`
-    //     divProductos.appendChild(listado)
-    // )}
+        Producto: ${producto.nombre}
+        <br>
+        Duración: ${producto.duracion} días
+        <br>
+        Volatilidad: ${producto.volatilidad}
+        <br>
+        Liquidez: en ${producto.liquidez} hs
+        <br>
+        Beneficio: coeficiente ${producto.beneficio}
+        </p>`
+        )})
+    );
 }
-
+        
 //Esta parte del código es para prevenir el submit del formulario, sumar los puntajes obtenidos del formulario e imprimir el resultado del test.
 
 //jQuery: on()
@@ -74,11 +64,3 @@ function submit (e) {
     perfilDeInversor(acumulativo);
     $("#cuestionario").append(`<p class="perfil" id="perfil">Tu perfil de inversión es:\n${perfil}</p>`);
 }
- 
-let arrow = $("#arrow")[0];
-// document.getElementById("arrow");
-arrow.onmouseover = () => cambiarArrow();
-
-let arrow2 = $("#arrow")[0];
-// document.getElementById("arrow");
-arrow2.onmouseleave = () => cambiarArrow2();
