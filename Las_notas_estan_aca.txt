@@ -1,6 +1,7 @@
 //¡Hola! Me traje los comentarios generales a un archivo aparte.
 //Logré separar las páginas y armé un js por sección como sugeriste. Funcionó. El archivo _events_anterior es el original y quedó sin uso.
 //Puse un defer en los <script> de los js de eventos para que se carguen a posteriori de la página, porque sino se generaba otro error de referencia (viene de acá: https://rolandocaldas.com/html5/como-incluir-javascript-en-html5)
+//Momentáneamente, la página principal es "registro". 
 
 //Para el desafío complementario incluí:
 //1. una animación simple en index.js, línea 82. Esta no es concatenada.

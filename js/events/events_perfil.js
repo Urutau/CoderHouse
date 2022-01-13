@@ -23,4 +23,10 @@ function submit (e) {
     document.getElementById("formulario").reset();
     perfilDeInversor(acumulativo);
     $("#cuestionario").append(`<p class="perfil" id="perfil">Tu perfil de inversión es:\n${perfil}</p>`);
+    $("#formulario").slideUp(2000, ()=>{
+        $("#cuestionario").append(`<button id="bRecomendacion">Recomendaciones según tu perfil de inversor</button>`);
+        $("#bRecomendacion").animate({
+            width: "100%",
+        }, 2000)
+    })
 }
