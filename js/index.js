@@ -1,19 +1,3 @@
-//¡Hola! Para este ejercicio, agregué jQuery en los siguientes sitios:
-//• archivo events.js: líneas 17, 21, 23, 24, 60, 67, 75, 78, 82.
-//• En este mismo archivo (index.js), líneas 136 y 142.
-//jQuery es tan práctico y ahorra tanto código que temo olvidar la forma anterior XD. No obstante, creo que hace el código menos legible para los humanos.
-
-
-//El proyecto es, por ahora, un sitio/aplicación para recomendación de productos financieros, de inversión, de acuerdo al perfil de inversor del usuario.
-//1. El usuario podrá ingresar, completar un test de 12 preguntas que determinará su perfil de inversor.
-//2. De acuerdo al perfil obtenido, el usuario obtendrá recomendaciones de inversión adecuados a sus preferencias.
-
-
-//Próximamente:
-//Integración de los datos del usuario con los datos del proceso de perfil (edad, perfil de inversor, sueldo, etc)
-//Front, presentación de recomendaciones y mecánica de recomendación.
-//Separación en secciones, una por HTML (lo intenté y se rompió todo, volví a la página única).
-
 let usuarios = [];
 let persona1 = {};
 let productos = [
@@ -69,18 +53,13 @@ function nuevoUsuario (){
 
 function nuevaInversion () {
         producto1 = new Inversion(
-        nombre = prompt("¿Nombre del producto financiero?"), 
-        duracion = parseInt(prompt("¿Duración en días?")), 
-        volatilidad = prompt("¿Volatilidad?\nAlta / Media / Baja"), 
-        liquidez = prompt("¿Plazo de liquidez?\nInmediata / 24hs / 48hs / 72hs / A plazo"), 
-        beneficio = prompt("¿Coeficiente de beneficio anualizado?")
+        nombre = $("#nombreprod")[0].value, 
+        duracion = $("#duracion")[0].value, 
+        volatilidad = $("#volatilidad")[0].value, 
+        liquidez = $("#liquidez")[0].value, 
+        beneficio = $("#beneficio")[0].value
     );
     productos.push(producto1);
-
-    const otra = prompt("¿Nuevo producto?\n1. Sí 2. No");
-    while (otra == 1) {
-        nuevaInversion();
-    }
 }
 console.log(productos);
 
@@ -89,18 +68,20 @@ function veinte3050 () {
     treinta = usuarioParse.sueldo*0.3;
     cincuenta = usuarioParse.sueldo*0.5;
 
-    let parrafo203050 = document.createElement("p");
-    parrafo203050.innerHTML = 
-        `<p class="veinte3050">Uno de los principios básicos de las finanzas es restar los gastos de los ingresos, lo que da como resultado el <strong>ahorro</strong>, es decir:<br><br>
-        ingresos - gastos = ahorro.<br><br>
-        Podemos optimizar nuestras finanzas, utilizando la regla 20/30/50:<br><br>
-        • Según la regla, el 50% debe destinarse a gastos fijos. El alquiler no debe exceder el 25 o 30%.En tu caso, dispondrías de $${cincuenta} para gastos fijos.<br><br>
-        • El 20% debe destinarse al ahorro ¡Y se separa al inicio de mes, no al final! Esto sería pagarte a vos, primero. Ojo, también van acá las deudas contraídas. Serían $${veinte}.<br><br>
-        • Por último, el 30% del sueldo representa los gastos deseados, esto es, los gustos y compras que no son <i>necesarias</i>. En tu caso, podrías destinar $${treinta}.<br><br>
-        Espero que esta información te haya sido de utilidad. Si querés conocer en qué podés invertir esos $${veinte}, ingresá en <a href="https://www.youtube.com/watch?v=-SgP7vPbenk" target="_blank">este enlace.</a>
-        <hr>
-        </p>`
-    document.getElementsByTagName("article")[0].appendChild(parrafo203050);
+    let parrafo = $("<p></p>");
+    parrafo.html(`<p class="veinte3050">Uno de los principios básicos de las finanzas es restar los gastos de los ingresos, lo que da como resultado el <strong>ahorro</strong>, es decir:<br><br>
+    ingresos - gastos = ahorro.<br><br>
+    Podemos optimizar nuestras finanzas, utilizando la regla 20/30/50:<br><br>
+    • Según la regla, el 50% debe destinarse a gastos fijos. El alquiler no debe exceder el 25 o 30%.En tu caso, dispondrías de $${cincuenta} para gastos fijos.<br><br>
+    • El 20% debe destinarse al ahorro ¡Y se separa al inicio de mes, no al final! Esto sería pagarte a vos, primero. Ojo, también van acá las deudas contraídas. Serían $${veinte}.<br><br>
+    • Por último, el 30% del sueldo representa los gastos deseados, esto es, los gustos y compras que no son <i>necesarias</i>. En tu caso, podrías destinar $${treinta}.<br><br>
+    Espero que esta información te haya sido de utilidad. Si querés conocer en qué podés invertir esos $${veinte}, ingresá en <a href="https://www.youtube.com/watch?v=-SgP7vPbenk" target="_blank">este enlace.</a>
+    <hr>
+    </p>`);
+
+    $("#nodo203050").append(parrafo).slideDown(2000, ()=>{
+        alert("¡Genial! ¿Querés conocer más sobre tu perfil? Hacé click en PERFIL.");
+    });
 }
 
 function hola (){

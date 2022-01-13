@@ -1,0 +1,19 @@
+//¡Hola! Me traje los comentarios generales a un archivo aparte.
+//Logré separar las páginas y armé un js por sección como sugeriste. Funcionó. El archivo _events_anterior es el original y quedó sin uso.
+//Puse un defer en los <script> de los js de eventos para que se carguen a posteriori de la página, porque sino se generaba otro error de referencia (viene de acá: https://rolandocaldas.com/html5/como-incluir-javascript-en-html5)
+
+//Para el desafío complementario incluí:
+//1. una animación simple en index.js, línea 82. Esta no es concatenada.
+//2. animaciones concatenadas en events_registro, línea 4.
+
+
+
+//El proyecto es, por ahora, un sitio/aplicación para recomendación de productos financieros, de inversión, de acuerdo al perfil de inversor del usuario.
+//1. El usuario podrá ingresar, completar un test de 12 preguntas que determinará su perfil de inversor.
+//2. De acuerdo al perfil obtenido, el usuario obtendrá recomendaciones de inversión adecuados a sus preferencias.
+
+
+//Próximamente:
+//Integración de los datos del usuario con los datos del proceso de perfil (edad, perfil de inversor, sueldo, etc). Cargar el perfil al LocalStorage.
+// Front, presentación de recomendaciones y mecánica de recomendación.
+//🆗 Separación en secciones, una por HTML (lo intenté y se rompió todo, volví a la página única).🆗
