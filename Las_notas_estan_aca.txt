@@ -6,6 +6,7 @@
 //Para el desafío complementario incluí:
 //1. una animación simple en index.js, línea 82. Esta no es concatenada.
 //2. animaciones concatenadas en events_registro, línea 4.
+//3. animaciones concatenadas en events_perfil, línea 26.
 
 
 

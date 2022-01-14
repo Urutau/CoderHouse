@@ -41,15 +41,15 @@
                         <br><br>
                         <label for="nombreprod">Nombre del producto</label>
                         <br>
-                        <input type="text" name="nombre" id="nombreprod">
+                        <input class="inputText" type="text" name="nombre" id="nombreprod">
                         <br><br>
                         <label for="duracion">Duración en meses</label>
                         <br>
-                        <input type="number" name="duracion" id="duracion" min="0">
+                        <input class="inputText" type="number" name="duracion" id="duracion" min="0">
                         <br><br>
                         <label for="volatilidad">Volatilidad</label>
                         <br>
-                        <select name="volatilidad" id="volatilidad">
+                        <select class="inputText" name="volatilidad" id="volatilidad">
                             <option value="Alta">Alta</option>
                             <option value="Media">Media</option>
                             <option value="Baja">Baja</option>
@@ -57,7 +57,7 @@
                         <br><br>
                         <label for="liquidez">Liquidez</label>
                         <br>
-                        <select name="liquidez" id="liquidez">
+                        <select class="inputText" name="liquidez" id="liquidez">
                             <option value="24">24hs</option>
                             <option value="48">48hs</option>
                             <option value="72">72hs</option>
@@ -66,10 +66,10 @@
                         <br><br>
                         <label for="beneficio">Coeficiente de beneficio anualizado</label>
                         <br>
-                        <input type="number" name="beneficio" id="beneficio" min="0" step="0.01">
+                        <input class="inputText" type="number" name="beneficio" id="beneficio" min="0" step="0.01">
                         <br><br>
                         
-                        <button>Grabar</button>
+                        <button class="buttonEnviar">Grabar</button>
                     </fieldset>
                 </form>
                 <div id="divProductos"></div>

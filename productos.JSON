@@ -1,0 +1,23 @@
+[
+    {
+        nombre: "Plazo fijo 30 días",
+        duracion: 30,
+        volatilidad: "Baja",
+        liquidez: "Nula",
+        beneficio: 1.37
+    },
+    {
+        nombre: "FCI Retorno Total",
+        duracion: 365,
+        volatilidad: "Media",
+        liquidez: "48hs",
+        beneficio: 1.54
+    },
+    {
+        nombre: "FCI Acciones Argentinas",
+        duracion: 365,
+        volatilidad: "Alta",
+        liquidez: "72hs",
+        beneficio: 1.60
+    }
+]

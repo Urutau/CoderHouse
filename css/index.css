@@ -69,6 +69,24 @@ li {
     column-rule-color: #ffdf32;
 }
 
+.inputText {
+    height: 2.5em;
+    width: 50%;
+    
+}
+
+.buttonEnviar {
+    font-size: 1.25em;
+    background-color:#271e4f;
+    color: #b7b7b7;
+    border-radius: 5px;
+    border-color: #ffdf32;
+}
+
+button:hover {
+    background-color:#9642d3 ;
+}
+
 .fieldset {
     /* border-radius: 5%; */
     /* border-color: #ffdf32; */
