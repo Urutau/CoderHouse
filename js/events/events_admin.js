@@ -8,7 +8,28 @@ bLimpiar.onclick = () => {
 $("#agregarProducto").submit((e)=>{
     e.preventDefault();
     nuevaInversion();
-    })
+})
+
+
+$("#bJSON").on("click", getProductosJSON)
+
+function getProductosJSON () {
+$.getJSON (URLGET, function (respuesta, estado) {
+    if (estado === "success") {
+        let productos = respuesta;
+        for (const producto of productos) {
+            $("#divJSON").append(
+                `<p>Nombre: ${producto.nombre}<br>
+                Volatilidad: ${producto.volatilidad}<br>
+                Duración: ${producto.duracion}<br>
+                Liquidez: ${producto.liquidez}<br>
+                Beneficio: ${producto.beneficio}<br>
+                </p>`
+            );
+        }
+    }
+})
+}
 
 $("#bListado").click( () => mostrarProductos() );
 

@@ -1,3 +1,4 @@
+const URLGET = "productos.JSON";
 let usuarios = [];
 let persona1 = {};
 let productos = [
