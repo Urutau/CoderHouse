@@ -16,6 +16,7 @@ $("#bJSON").on("click", getProductosJSON)
 function getProductosJSON () {
 $.getJSON (URLGET, function (respuesta, estado) {
     if (estado === "success") {
+        $("#divJSON").prepend(`<h2>Catálogo actual de productos financieros:</h2>`);
         let productos = respuesta;
         for (const producto of productos) {
             $("#divJSON").append(

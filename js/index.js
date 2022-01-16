@@ -1,4 +1,5 @@
 const URLGET = "productos.JSON";
+const datosPersonales = "Cristina Cecilia Ortega 2022 | xristinaortega@gmail.com"
 let usuarios = [];
 let persona1 = {};
 let productos = [
@@ -60,6 +61,15 @@ function nuevaInversion () {
         liquidez = $("#liquidez")[0].value, 
         beneficio = $("#beneficio")[0].value
     );
+    
+    // let infoPOST = producto1;
+    // console.table(infoPOST);
+    //     $.post(URLGET, infoPOST, (respuesta, estado) => {
+    //     if (estado === "success") {
+    //         console.log("Éxito", respuesta);
+    //     }
+    // })
+    
     productos.push(producto1);
 }
 console.log(productos);

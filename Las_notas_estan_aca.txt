@@ -1,13 +1,9 @@
-//¡Hola! Me traje los comentarios generales a un archivo aparte.
-//Logré separar las páginas y armé un js por sección como sugeriste. Funcionó. El archivo _events_anterior es el original y quedó sin uso.
-//Puse un defer en los <script> de los js de eventos para que se carguen a posteriori de la página, porque sino se generaba otro error de referencia (viene de acá: https://rolandocaldas.com/html5/como-incluir-javascript-en-html5)
-//Momentáneamente, la página principal es "registro". 
+//Para este desafío:
+//Armé un JSON con el array de productos que tenía hecho, y lo consulto con una llamada AJAX jQuery (archivo events_admin.js, línea 16).
+//Para probarlo sumé un botón en admin.html para imprimir en pantalla el contenido del JSON. 
 
-//Para el desafío complementario incluí:
-//1. una animación simple en index.js, línea 82. Esta no es concatenada.
-//2. animaciones concatenadas en events_registro, línea 4.
-//3. animaciones concatenadas en events_perfil, línea 26.
-
+//Armé un POST y no funciona. Obtengo el error "jquery-3.6.0.min.js:2 POST http://127.0.0.1:5500/productos.JSON 405 (Method Not Allowed)" por la consola.
+//O no puedo grabar en un JSON local o algo escribí incorrectamente. Ese código está comentado en línea 64 de index.js. (fn nuevaInversion()). 
 
 
 //El proyecto es, por ahora, un sitio/aplicación para recomendación de productos financieros, de inversión, de acuerdo al perfil de inversor del usuario.
@@ -17,5 +13,5 @@
 
 //Próximamente:
 //Integración de los datos del usuario con los datos del proceso de perfil (edad, perfil de inversor, sueldo, etc). Cargar el perfil al LocalStorage.
-// Front, presentación de recomendaciones y mecánica de recomendación.
+//Front, presentación de recomendaciones y mecánica de recomendación.
 //🆗 Separación en secciones, una por HTML (lo intenté y se rompió todo, volví a la página única).🆗
