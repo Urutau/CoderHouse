@@ -1,4 +1,3 @@
-const datosPersonales = "Cristina Cecilia Ortega 2022 | xristinaortega@gmail.com"
 let usuarios = [];
 let persona1 = {};
 let productos = [
@@ -153,7 +152,6 @@ function hola (){
 
 function guardarPerfil (perfil) {
     perfilLS = localStorage.setItem("usuarioP", JSON.stringify(perfil));
-    // perfilLS = localStorage.setItem("usuarioP", JSON.stringify({"perfil": perfil}));
 }
 
 function perfilDeInversor (acumulativo) {
@@ -178,27 +176,28 @@ function obtenerPerfilYGuardar () {
     guardarPerfil(perfil);
 }
 
-// let perfilParaFiltro = perfilParse.perfil;
 let monto = 100;
 function filtro () {
   
     if (perfilParse === "Conservador") {
-        sugerencia = productos.filter(producto => producto.volatilidad == "Alta")
-        }  
+            sugerencia = productos.filter( producto => producto.volatilidad == "Baja")
+        } else if (perfilParse === "Moderadamente Conservador") {
+            sugerencia = productos.filter( producto => (producto.volatilidad == "Baja" || producto.volatilidad == "Media"))
+        } else if (perfilParse === "Moderado") {
+            sugerencia = productos.filter( producto => producto.volatilidad == "Media")
+        } else if (perfilParse === "Moderadamente Agresivo") {
+            sugerencia = productos.filter( producto => (producto.volatilidad == "Alta" || producto.volatilidad == "Media"))
+        } else if (perfilParse === "Agresivo") {
+            sugerencia = productos.filter( producto => producto.volatilidad == "Alta")
+            console.log("sugerencia", sugerencia);
+        } else {console.log ("Error, valor no reconocido.")}
+
     $("#sugerencia").append(sugerencia.forEach( s => {$("#sugerencia").append(`<p>
-    Inversión: ${s.nombre}<br><br>
-    Volatilidad: ${s.volatilidad}<br><br>
-    En $${s.duracion}, el rendimiento calculado es de $${monto * s.beneficio}.<br><br>
+        Inversión: ${s.nombre}<br><br>
+        Volatilidad: ${s.volatilidad}<br><br>
+        En un año, el rendimiento calculado es de $${monto * s.beneficio}.<br><br>
     </p>`)}));
 }
-
-console.log(typeof perfilParse);
-console.log(perfilParse);
-console.table(perfilParse);
-console.log(filtro());
-console.log(typeof sugerencia);
-console.table(sugerencia);
-
 
 function cambiarArrow () {
     let flecha = $("#arrow")[0];

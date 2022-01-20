@@ -31,8 +31,9 @@ function submit (e) {
         $("#cuestionario").append(`<button class="buttonEnviar" id="bRecomendacion">Recomendaciones según tu perfil de inversor</button>`);
         $("#bRecomendacion").animate({
             width: "100%",
-        }, 2000).on("click", filtro);
+        }, 2000).on("click", () => {
+            filtro();
+            $("#simulacion").slideDown("slow");})
     })
 }
 
-// $("#bRecomendacion").on("click", function () {console.log("HOLA")});

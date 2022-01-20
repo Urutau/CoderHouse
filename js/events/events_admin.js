@@ -37,7 +37,7 @@ $.getJSON (URLGET, function (respuesta, estado) {
 
 // Este es el bloque que muestra el listado de productos obtenido del JSON local, se imprime en el espacio derecho 
 // de la página desde el botón "Mostrar listado de productos"
-$("#bListado").click( () => mostrarProductos() );
+$("#bListado").one("click", () => mostrarProductos() );
 function mostrarProductos () {
     $.getJSON(URLGET2, (respuesta, estado) => {
 

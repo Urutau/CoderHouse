@@ -106,7 +106,7 @@ button:hover {
 
 .veinte3050 {
     color: #b7b7b7;
-    font-size: 1em;
+    font-size: 1.25em;
     padding: 5% 5% 5% 5%;
     text-align: left;
 }
@@ -118,6 +118,11 @@ button:hover {
     border-radius: 20%;
     padding: 5% 5% 5% 5%;
     text-align: center;
+}
+
+.texto {
+    color: #b7b7b7;
+    font-size: 1.5em;
 }
 
 .jotaro_badge {
