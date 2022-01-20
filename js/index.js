@@ -1,16 +1,9 @@
-const URLGET = "productos.JSON";
 const datosPersonales = "Cristina Cecilia Ortega 2022 | xristinaortega@gmail.com"
 let usuarios = [];
 let persona1 = {};
 let productos = [
     {
-        nombre: "Plazo fijo 30 días",
-        duracion: 30,
-        volatilidad: "Baja",
-        liquidez: "Nula",
-        beneficio: 1.37
-    },
-    {
+        id: 1,
         nombre: "FCI Retorno Total",
         duracion: 365,
         volatilidad: "Media",
@@ -18,26 +11,58 @@ let productos = [
         beneficio: 1.54
     },
     {
+        id: 2,
         nombre: "FCI Acciones Argentinas",
         duracion: 365,
         volatilidad: "Alta",
         liquidez: "72hs",
         beneficio: 1.60
+    },
+    {
+        id: 3,
+        nombre: "Plazo fijo Banco Ciudad",
+        duracion: 365,
+        volatilidad: "Baja",
+        liquidez: "A plazo",
+        beneficio: 1.39
+    },
+    {
+        id: 4,
+        nombre: "Plazo fijo Banco Macro",
+        duracion: 365,
+        volatilidad: "Baja",
+        liquidez: "A plazo",
+        beneficio: 1.37
+    },
+    {
+        id: 5,
+        nombre: "Bitcoin ($BTC)",
+        duracion: 365,
+        volatilidad: "Alta",
+        liquidez: "Inmediata",
+        beneficio: 1.37
     }
 ]
+
+let sugerencia = [];
 
 let producto1 = {};
 let veinte;
 let treinta;
 let cincuenta;
-const filtroDeVolatilidad = productos.filter(producto => producto.volatilidad == "Baja");
-console.log(filtroDeVolatilidad);
+// const filtroDeVolatilidad = productos.filter(producto => producto.volatilidad == "Baja");
+// console.log(filtroDeVolatilidad);
 
 let acumulativo = 0;
 let perfil = "";
 let rango = "";
 let datosUsuario;
 let usuarioParse = JSON.parse(localStorage.getItem("usuario"));
+let perfilLS = {};
+let perfilParse = JSON.parse(localStorage.getItem("usuarioP"));
+
+// const URLPUT = "https://api.jsonbin.io/v3/b/61e7130ddbe5d130832813b4"
+// const URLPOST = "https://api.jsonbin.io/v3/b"
 
 function nuevoUsuario (){
     persona1 = new Usuario(
@@ -55,6 +80,7 @@ function nuevoUsuario (){
 
 function nuevaInversion () {
         producto1 = new Inversion(
+        id = $("#idProd")[0].value,
         nombre = $("#nombreprod")[0].value, 
         duracion = $("#duracion")[0].value, 
         volatilidad = $("#volatilidad")[0].value, 
@@ -62,17 +88,35 @@ function nuevaInversion () {
         beneficio = $("#beneficio")[0].value
     );
     
-    // let infoPOST = producto1;
-    // console.table(infoPOST);
-    //     $.post(URLGET, infoPOST, (respuesta, estado) => {
-    //     if (estado === "success") {
-    //         console.log("Éxito", respuesta);
+    console.table(producto1);
+    // let infoPOST = JSON.stringify(producto1);
+
+//ESTE PUT FUNCIONA, PERO REEMPLAZA EL JSON COMPLETO POR EL ÚLTIMO ENVÍO    
+    // $.ajax({
+    //     method : "PUT",
+    //     url : URLPUT,
+    //     data : infoPOST,
+    //     headers : {"Content-Type": "application/json","X-Master-Key": "$2b$10$fMMTdx56feGpk7c9Uo9Uz.2T9leeiL0RkPh.lA30KaH1I24DNSHkC"},
+    //     dataType: "json",
+    //     success: function(respuesta){
+    //         console.log(respuesta);
+    //     }
+    // })
+
+//ESTE POST FUNCIONA, PERO SUMA OTRO BIN    
+    // $.ajax({
+    //     method : "POST",
+    //     url : URLPOST,
+    //     data : infoPOST,
+    //     headers : {"Content-Type": "application/json","X-Master-Key": "$2b$10$fMMTdx56feGpk7c9Uo9Uz.2T9leeiL0RkPh.lA30KaH1I24DNSHkC"},
+    //     dataType: "json",
+    //     success: function(respuesta){
+    //         console.log(respuesta);
     //     }
     // })
     
     productos.push(producto1);
 }
-console.log(productos);
 
 function veinte3050 () {
     veinte = usuarioParse.sueldo*0.2;
@@ -91,7 +135,7 @@ function veinte3050 () {
     </p>`);
 
     $("#nodo203050").append(parrafo).slideDown(2000, ()=>{
-        alert("¡Genial! ¿Querés conocer más sobre tu perfil? Hacé click en PERFIL.");
+        $("#modalRegistro").modal();
     });
 }
 
@@ -107,31 +151,61 @@ function hola (){
     }
 }
 
+function guardarPerfil (perfil) {
+    perfilLS = localStorage.setItem("usuarioP", JSON.stringify(perfil));
+    // perfilLS = localStorage.setItem("usuarioP", JSON.stringify({"perfil": perfil}));
+}
+
 function perfilDeInversor (acumulativo) {
-        if (acumulativo <= 23){
-            perfil = "Conservador";
-        } else if (acumulativo <= 30){
-            perfil = "Moderadamente Conservador";
-        } else if (acumulativo <= 37){
-            perfil = "Moderado";
-        } else if (acumulativo <= 42){
-            perfil = "Moderadamente Agresivo";
-        } else if (acumulativo <= 48){
-            perfil = "Agresivo";
-        } else {
-            perfil = "El resultado no coincide con un perfil definido. Volvé a hacer el test o comunicate con nosotros por la sección Contacto.";
-        }
+    if (acumulativo <= 23){
+        perfil = "Conservador";
+    } else if (acumulativo <= 30){
+        perfil = "Moderadamente Conservador";
+    } else if (acumulativo <= 37){
+        perfil = "Moderado";
+    } else if (acumulativo <= 42){
+        perfil = "Moderadamente Agresivo";
+    } else if (acumulativo <= 48){
+        perfil = "Agresivo";
+    } else {
+        perfil = "El resultado no coincide con un perfil definido. Volvé a hacer el test o comunicate con nosotros por la sección Contacto.";
+    }
     return perfil;
 }
 
+function obtenerPerfilYGuardar () {
+    perfilDeInversor(acumulativo);
+    guardarPerfil(perfil);
+}
+
+// let perfilParaFiltro = perfilParse.perfil;
+let monto = 100;
+function filtro () {
+  
+    if (perfilParse === "Conservador") {
+        sugerencia = productos.filter(producto => producto.volatilidad == "Alta")
+        }  
+    $("#sugerencia").append(sugerencia.forEach( s => {$("#sugerencia").append(`<p>
+    Inversión: ${s.nombre}<br><br>
+    Volatilidad: ${s.volatilidad}<br><br>
+    En $${s.duracion}, el rendimiento calculado es de $${monto * s.beneficio}.<br><br>
+    </p>`)}));
+}
+
+console.log(typeof perfilParse);
+console.log(perfilParse);
+console.table(perfilParse);
+console.log(filtro());
+console.log(typeof sugerencia);
+console.table(sugerencia);
+
+
 function cambiarArrow () {
     let flecha = $("#arrow")[0];
-    // document.getElementById("arrow");
     flecha.src = "./images/ladybug.png";
 }
 
 function cambiarArrow2 () {
     let flecha2 = $("#arrow")[0];
-    // document.getElementById("arrow");    
     flecha2.src = "./images/arrow_r.png";
 }

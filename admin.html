@@ -9,7 +9,7 @@
     </head>
     
     <body>
-        <main>
+        <main style="grid-template-columns: 1fr 2fr 2fr;" >
 
             <header>
                 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -22,24 +22,30 @@
             </header>
 
             <aside>
+                <div id="divProductos"></div>
             </aside>
 
             <nav>
                 <div>
-                    <button id="bListado">Mostrar listado de productos</button>
-                    <br><br>
-                    <button id="bLimpiar">Limpiar LS</button>
-                    <br><br><br>
-                    <a href="perfil.html"><button>PERFIL</button></a>
+                    <button id="bListado" class="buttonNav">Mostrar listado de productos</button>
+                    <br><br><br><br>
+                    <button id="bLimpiar" class="buttonNav">Limpiar LS</button>
+                    <br><br><br><br>
+                    <a href="perfil.html"><button class="buttonNav">PERFIL</button></a>
                     <br><br>
                 </div>
             </nav>
 
-            <article>
+            <article style="padding-right: 3%;">
                 <form id="agregarProducto">
                     <fieldset class="fieldset">
-                        <legend>Ingrese los datos del nuevo producto</legend>
-                        <br><br>
+                        <legend><h2>Ingresar nuevo producto</h2></legend>
+                        <br>
+                        <label for="idProd">ID</label>
+                        <br>
+                        <input class="inputText" type="number" name="id" id="idProd" min="0">
+
+                        <br>
                         <label for="nombreprod">Nombre del producto</label>
                         <br>
                         <input class="inputText" type="text" name="nombre" id="nombreprod">
@@ -71,10 +77,12 @@
                         <br><br>
                         
                         <button class="buttonEnviar">Grabar</button>
+                        <br><br>
+                        <hr>
                     </fieldset>
                 </form>
-                <div id="divProductos"></div>
-                <button id="bJSON">getJSON</button>
+                <br>
+                <button id="bJSON" class="buttonEnviar">getJSON</button>
                 <div id="divJSON"></div>
             </article>
             

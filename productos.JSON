@@ -1,12 +1,6 @@
 [
     {
-        "nombre": "Plazo fijo 30 días",
-        "duracion": 30,
-        "volatilidad": "Baja",
-        "liquidez": "Nula",
-        "beneficio": 1.37
-    },
-    {
+        "id": 1,
         "nombre": "FCI Retorno Total",
         "duracion": 365,
         "volatilidad": "Media",
@@ -14,10 +8,36 @@
         "beneficio": 1.54
     },
     {
+        "id": 2,
         "nombre": "FCI Acciones Argentinas",
         "duracion": 365,
         "volatilidad": "Alta",
         "liquidez": "72hs",
         "beneficio": 1.60
+    },
+    {
+        "id": 3,
+        "nombre": "Plazo fijo Banco Ciudad",
+        "duracion": 365,
+        "volatilidad": "Baja",
+        "liquidez": "A plazo",
+        "beneficio": 1.39
+    },
+    {
+        "id": 4,
+        "nombre": "Plazo fijo Banco Macro",
+        "duracion": 365,
+        "volatilidad": "Baja",
+        "liquidez": "A plazo",
+        "beneficio": 1.37
+    },
+    {
+        "id": 5,
+        "nombre": "Bitcoin ($BTC)",
+        "duracion": 365,
+        "volatilidad": "Alta",
+        "liquidez": "Inmediata",
+        "beneficio": 1.37
     }
+
 ]

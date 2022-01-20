@@ -16,6 +16,8 @@
                 <script type="text/javascript" src="./js/classes/index.classes.js"></script>    
                 <script type="text/javascript" src="./js/index.js"></script>
                 <script defer src="./js/events/events_registro.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
                 <img src="./images/jotaro_badge_r.png" class="jotaro_badge" alt="imagen decorativa">
                 <script type="text/javascript">hola()</script>
@@ -26,15 +28,15 @@
 
             <nav>
                 <div>
-                    <button id="bUsuario">Crear nuevo usuario</button>
+                    <button id="bUsuario" class="buttonNav">Crear nuevo usuario</button>
                     <br><br>
-                    <button id="b203050">¿Cómo administro mi sueldo?</button>
+                    <button id="b203050" class="buttonNav">¿Cómo administro mi sueldo?</button>
                     <br><br><br>
-                    <button id="bLimpiar">Limpiar LS</button>
+                    <button id="bLimpiar" class="buttonNav">Limpiar LS</button>
+                    <br><br><br>
+                    <a href="perfil.html"><button class="buttonNav">PERFIL</button></a>
                     <br><br>
-                    <a href="admin.html"><button>ADMIN PAGE</button></a>
-                    <br><br>
-                    <a href="perfil.html"><button>PERFIL</button></a>
+                    <a href="admin.html"><button class="buttonNav">ADMIN PAGE</button></a>
                 
                     <br><br><br>
                 </div>
@@ -61,6 +63,9 @@
             </article>
             
             <footer>
+                <div id="modalRegistro" class="modal">
+                    <p>¡Genial! ¿Querés conocer más sobre tu perfil? Cuando estés listo, hacé click en el botón PERFIL.</p>
+                </div>
                 <img src="./images/arrow_r.png" class="requiem_arrow" id="arrow" alt="imagen decorativa">
             </footer>
         </main>

@@ -19,7 +19,8 @@ class Usuario {
 }
 
 class Inversion {
-    constructor (nombre, duracion, volatilidad, liquidez, beneficio) {
+    constructor (id, nombre, duracion, volatilidad, liquidez, beneficio) {
+        this.id = id,
         this.nombre = nombre,
         this.duracion = duracion,
         this.volatilidad = volatilidad,

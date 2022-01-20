@@ -40,18 +40,22 @@ h3 {
     size: 1.3em;
     color: #9642d3;
 }
+
 h4 {
     size: 1em;
     color: #9642d3;
 }
+
 h5 {
     size: 0.8em;
     color: #9642d3;
 }
+
 h6 {
     size: 0.7em;
     color: #9642d3;
 }
+
 p {
     color: #b7b7b7;
 }
@@ -71,8 +75,16 @@ li {
 
 .inputText {
     height: 2.5em;
-    width: 50%;
-    
+    width: 50%;    
+}
+
+.buttonNav {
+    font-size: 1em;
+    background-color:#b7b7b7;
+    color: #271e4f;
+    border-radius: 5px;
+    border-color: #ffdf32;
+    width: 80%;
 }
 
 .buttonEnviar {
@@ -88,10 +100,15 @@ button:hover {
 }
 
 .fieldset {
-    /* border-radius: 5%; */
-    /* border-color: #ffdf32; */
     border-style: none;
     color: #b7b7b7;
+}
+
+.veinte3050 {
+    color: #b7b7b7;
+    font-size: 1em;
+    padding: 5% 5% 5% 5%;
+    text-align: left;
 }
 
 .perfil {
@@ -101,13 +118,6 @@ button:hover {
     border-radius: 20%;
     padding: 5% 5% 5% 5%;
     text-align: center;
-}
-
-.veinte3050 {
-    color: #b7b7b7;
-    font-size: 1em;
-    padding: 5% 5% 5% 5%;
-    text-align: left;
 }
 
 .jotaro_badge {

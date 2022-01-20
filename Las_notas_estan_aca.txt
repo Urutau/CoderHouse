@@ -1,12 +1,13 @@
-//Para este desafío:
-//Armé un JSON con el array de productos que tenía hecho, y lo consulto con una llamada AJAX jQuery (archivo events_admin.js, línea 16).
-//Para probarlo sumé un botón en admin.html para imprimir en pantalla el contenido del JSON. 
+//Para esta entrega:
+// Logré que funcione el POST, pasa lo siguiente:
+// Alojé el JSON en un sitio (https://api.jsonbin.io/b/61e7130ddbe5d130832813b4/1), se almacena en un "Bin":
+//---Si uso POST, se graban los datos en un Bin nuevo, o sea, genero un segundo JSON.
+//---Si uso el PUT, se reemplaza el JSON original con el nuevo producto, y me queda ese producto solito en el JSON. O sea, ninguna de las dos opciones me sirve, pero estoy contenta porque después de dos días completos de intentos pude hacer funcionar los dos métodos XD
+// Por esto, sigue vigente el JSON local [productos] y sobre él aplico el filtro para obtener la sugerencia de inversión según perfil.
 
-//Armé un POST y no funciona. Obtengo el error "jquery-3.6.0.min.js:2 POST http://127.0.0.1:5500/productos.JSON 405 (Method Not Allowed)" por la consola.
-//O no puedo grabar en un JSON local o algo escribí incorrectamente. Ese código está comentado en línea 64 de index.js. (fn nuevaInversion()). 
 
 
-//El proyecto es, por ahora, un sitio/aplicación para recomendación de productos financieros, de inversión, de acuerdo al perfil de inversor del usuario.
+//El proyecto es, un sitio/aplicación para recomendación de productos financieros, de inversión, de acuerdo al perfil de inversor del usuario.
 //1. El usuario podrá ingresar, completar un test de 12 preguntas que determinará su perfil de inversor.
 //2. De acuerdo al perfil obtenido, el usuario obtendrá recomendaciones de inversión adecuados a sus preferencias.
 
