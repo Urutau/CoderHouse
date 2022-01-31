@@ -1,27 +1,11 @@
 [
     {
-        "id": 1,
-        "nombre": "FCI Retorno Total",
-        "duracion": 365,
-        "volatilidad": "Media",
-        "liquidez": "48hs",
-        "beneficio": 1.54
-    },
-    {
-        "id": 2,
-        "nombre": "FCI Acciones Argentinas",
-        "duracion": 365,
-        "volatilidad": "Alta",
-        "liquidez": "72hs",
-        "beneficio": 1.60
-    },
-    {
         "id": 3,
         "nombre": "Plazo fijo Banco Ciudad",
         "duracion": 365,
         "volatilidad": "Baja",
         "liquidez": "A plazo",
-        "beneficio": 1.39
+        "beneficio": 0.39
     },
     {
         "id": 4,
@@ -29,7 +13,39 @@
         "duracion": 365,
         "volatilidad": "Baja",
         "liquidez": "A plazo",
-        "beneficio": 1.37
+        "beneficio": 0.37
+    },
+    {
+        "id": 1,
+        "nombre": "FCI Retorno Total",
+        "duracion": 365,
+        "volatilidad": "Media",
+        "liquidez": "48hs",
+        "beneficio": 0.54
+    },
+    {
+        "id": 6,
+        "nombre": "$SPY CEDEAR",
+        "duracion": 365,
+        "volatilidad": "Media",
+        "liquidez": "48hs",
+        "beneficio": 0.55
+    },
+    {
+        "id": 7,
+        "nombre": "DAI (stablecoin)",
+        "duracion": 365,
+        "volatilidad": "Media",
+        "liquidez": "Inmediata",
+        "beneficio": 0.18
+    },
+    {
+        "id": 2,
+        "nombre": "FCI Acciones Argentinas",
+        "duracion": 365,
+        "volatilidad": "Alta",
+        "liquidez": "72hs",
+        "beneficio": 0.60
     },
     {
         "id": 5,
@@ -37,7 +53,6 @@
         "duracion": 365,
         "volatilidad": "Alta",
         "liquidez": "Inmediata",
-        "beneficio": 1.37
+        "beneficio": 0.37
     }
-
 ]

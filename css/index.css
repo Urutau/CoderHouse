@@ -120,9 +120,26 @@ button:hover {
     text-align: center;
 }
 
+.tarjeta {
+    width: auto;
+    margin: 3% 3% 3% 3%;
+    border: #b7b7b7 solid 0.5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px #bd63b4;
+    padding: 3% 2% 2% 3%;
+}
+
+.centrar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
 .texto {
     color: #b7b7b7;
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
 
 .jotaro_badge {
@@ -148,12 +165,3 @@ button:hover {
         background-image: linear-gradient(to right bottom, #00012c, #00012c,#00012c,#00012c, #271e4f, #543573, #864c95, #bd63b4);
     }
 }
-
-/* Paleta Jotaro: https://www.color-hex.com/color-palette/39080 */
-
-/*
-#00012c Azul Oscuro	(0,1,44)
-#07004c	Azul Oscuro -1 (7,0,76)
-#9642d3	Violeta (150,66,211)
-#ffdf32	Amarillo (255,223,50)
-#b7b7b7	Rojish (183,183,183) */

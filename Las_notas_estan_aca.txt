@@ -1,18 +1,28 @@
-//Para esta entrega:
-// Logré que funcione el POST, pasa lo siguiente:
-// Alojé el JSON en un sitio (https://api.jsonbin.io/b/61e7130ddbe5d130832813b4/1), se almacena en un "Bin":
-//---Si uso POST, se graban los datos en un Bin nuevo, o sea, genero un segundo JSON.
-//---Si uso el PUT, se reemplaza el JSON original con el nuevo producto, y me queda ese producto solito en el JSON. O sea, ninguna de las dos opciones me sirve, pero estoy contenta porque después de dos días completos de intentos pude hacer funcionar los dos métodos XD
-// Por esto, sigue vigente el JSON local [productos] y sobre él aplico el filtro para obtener la sugerencia de inversión según perfil.
-
-
-
 //El proyecto es, un sitio/aplicación para recomendación de productos financieros, de inversión, de acuerdo al perfil de inversor del usuario.
 //1. El usuario podrá ingresar, completar un test de 12 preguntas que determinará su perfil de inversor.
 //2. De acuerdo al perfil obtenido, el usuario obtendrá recomendaciones de inversión adecuados a sus preferencias.
 
 
-//Próximamente:
-//Integración de los datos del usuario con los datos del proceso de perfil (edad, perfil de inversor, sueldo, etc). Cargar el perfil al LocalStorage.
-//Front, presentación de recomendaciones y mecánica de recomendación.
-//🆗 Separación en secciones, una por HTML (lo intenté y se rompió todo, volví a la página única).🆗
+• El array de productos financieros se encuentra en tres lugares:
+---el array productos, en index.js
+---el archivo productos.JSON
+---un bin en el sitio JSONBin.io
+Esta distribución es sólo a efectos de aplicar distintos orígenes a las funciones AJAX.
+
+• Hay botones para vaciar el Local Storage y facilitar las pruebas. 
+• El archivo index.js fue el primer js del proyecto. Sigue ahí sólo porque cuando quise mover lo que quedó, algo dejaba de funcionar.
+
+El sitio consta de tres páginas:
+---index.html es la página de inicio y la que contiene el formulario de registro, que guarda los datos en Local Storage. El nombre se imprime en el titular 
+de bienvenida,mientras que el dato del sueldo sirve para calcular los montos para administración con el botón "¿Cómo administro mi sueldo?".
+
+---perfil.html es la página que contiene el formulario que calcula el puntaje obtenido según las opciones elegidas y arroja 
+el resultado del test (perfil de inversión) de acuerdo al dicho puntaje. Las alternativas son "Conservador", "Moderadamente Conservador", "Moderado", 
+"Moderadamente Agresivo" y "Agresivo". Al presionar el botón Enviar, se imprime el perfil resultante y aparece el botón "Recomendaciones según tu perfil de inversión" 
+cuyo clic despliega los productos de inversión filtrados (origen: productos.JSON).
+
+---admin.html es una página destinada al administrador, con posibilidad de sumar productos de inversión por un formulario. Ese formulario agrega un elemento 
+al array productos, cuyo ingreso se puede constatar presionando el botón Mostrar listado de productos.
+En la misma página, el botón getJSON muestra los valores del array traidos del sitio JSONBin.io, un lugar donde alojé el JSON para aplicar AJAX con jQuery.
+
+¡Gracias por la corrección!
